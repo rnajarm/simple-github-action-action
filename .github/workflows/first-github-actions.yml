@@ -1,0 +1,13 @@
+name: Rub Shell COmmands
+on: [push]
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo as String
+        run:
+          echo "Hello Security Gurus!! This is our first GitHub Actions workflow file"
+          pwd
+          ls -la
+          echo "Shell commands executed successfully."
