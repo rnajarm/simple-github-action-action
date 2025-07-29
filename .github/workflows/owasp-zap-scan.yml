@@ -2,6 +2,11 @@ name: OWASP ZAP Integration with GitHub Actions
 
 on: [push]
 
+permissions:
+  contents: read
+  issues: write
+  security-events: write
+
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
@@ -18,3 +23,5 @@ jobs:
           target: "http://testphp.vulnweb.com/"
           rules_file_name: ".zap/rules.tsv"
           cmd_options: "-a"
+          issue_title: false
+          fail_action: true
