@@ -1,0 +1,24 @@
+# ZAP Scanning Rules
+# Format: ID	THRESHOLD	[EXCLUDE_REGEX]
+# IGNORE: All alerts with the given ID are ignored
+# WARN: All alerts with the given ID are included but are ignored when determining the outcome of the scan
+# FAIL: All alerts with the given ID will cause the action to fail
+
+# Common rules for baseline scan
+10023	IGNORE	# Information Disclosure - Debug Error Messages
+10015	IGNORE	# Incomplete or No Cache-control and Pragma HTTP Header Set
+10017	IGNORE	# Cross-Domain JavaScript Source File Inclusion
+10020	IGNORE	# X-Frame-Options Header Not Set
+10021	IGNORE	# X-Content-Type-Options Header Missing
+10035	IGNORE	# Strict-Transport-Security Header Not Set
+10037	IGNORE	# Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)
+10038	IGNORE	# Content Security Policy (CSP) Header Not Set
+10040	IGNORE	# Secure Pages Include Mixed Content
+10054	IGNORE	# Cookie without Secure flag
+10055	IGNORE	# CSP: Wildcard Directive
+10056	IGNORE	# X-Debug-Token Information Leak
+10094	IGNORE	# Base64 Disclosure
+10095	IGNORE	# Backup File Disclosure
+10096	IGNORE	# Timestamp Disclosure
+10097	IGNORE	# Hash Disclosure
+10098	IGNORE	# Cross-Domain Misconfiguration
